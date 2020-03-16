@@ -78,7 +78,7 @@ public class BooleanNewController implements Initializable {
 	private ObservableList<String> contractLineTypeList = FXCollections
 			.observableArrayList("SINGLE_ASSIGNMENT_PER_DAY",
 					"COMPLETE_WEEKENDS", "IDENTICAL_SHIFT_TYPES_DURING_WEEKEND",
-					"NO_NIGHT_SHIFT_BEFORE_FREE_WEEKEND",
+					"NO_NIGHT_SHIFT_BEFORE_FREE_WEEKEND","NO_NIGHT_SHIFTS",
 					"ALTERNATIVE_SKILL_CATEGORY","ALTERNATIVE_DEPARTMENT","IS_LOADBALANCED",
 					"IS_CASUAL");
 	/**

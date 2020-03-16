@@ -147,6 +147,16 @@ then
          
 end
 
+rule "No Night Shifts"
+
+    when $contractLine : BooleanContractLine(contractLineType == ContractLineType.NO_NIGHT_SHIFTS, enabled == true, $contract : contract,$weight : weight) 
+      $employee : Employee(contract == $contract)
+      $shiftType : ShiftType(night == true)
+     ShiftAssignment(employee ==$employee, shiftType ==$shiftType)
+    then
+    scoreHolder.addSoftConstraintMatch(kcontext, - $weight);
+   
+  end
 
 
 

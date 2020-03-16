@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -41,11 +42,7 @@
             <Label text="Shift Description" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <Pane prefHeight="86.0" prefWidth="600.0" style="-fx-background-color: #8AC5D1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <MaterialDesignIconView fill="#0d0d0d" glyphName="CLOCK_IN" layoutX="30.0" layoutY="69.0" size="60" />
-         </children>
-      </Pane>
+      <Pane prefHeight="86.0" prefWidth="600.0" style="-fx-background-color: #8AC5D1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Label fx:id="applicatonname" layoutX="106.0" layoutY="24.0" text="New Shifts" textFill="WHITE">
          <font>
             <Font size="48.0" />
@@ -57,6 +54,11 @@
             <Button layoutX="385.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleOk" styleClass="buttonupdate" stylesheets="@fullpackstyling.css" text="Update" />
         </buttons>
       </ButtonBar>
+      <ImageView fitHeight="74.0" fitWidth="75.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../org/optaplanner/examples/common/swingui/config_date.png" />
+         </image>
+      </ImageView>
    </children>
    <effect>
       <DropShadow />
