@@ -303,7 +303,32 @@ rule "minimumConsecutiveWorkingDays"
         scoreHolder.addSoftConstraintMatch(kcontext, ($dayLength - $minimumValue) * $contractLine.getMinimumWeight());
 end
 
+rule "NO_NIGHT_SHIFT_BEFORE_FREE_WEEKEND"
 
+    when $contractLine : BooleanContractLine(contractLineType == ContractLineType.NO_NIGHT_SHIFT_BEFORE_FREE_WEEKEND, enabled == true, $contract : contract,$weight : weight) 
+     $employee : Employee(contract == $contract, $weekendLength : weekendLength)
+        ShiftDate(dayOfWeek == DayOfWeek.SUNDAY, $sundayIndex : dayIndex)
+        $shiftType : ShiftType()
+        accumulate(
+            $assignment : ShiftAssignment(
+                weekend == true,
+                weekendSundayIndex == $sundayIndex,
+                employee == $employee,
+                shiftType == $shiftType);
+            $weekendAssignmentTotal : count($assignment);
+            $weekendAssignmentTotal > 0 && $weekendAssignmentTotal < $weekendLength
+        )
+        
+$shiftTypeNight : ShiftType(night == true)
+$shiftDateN:ShiftDate(dayOfWeek == DayOfWeek.FRIDAY)    
+ShiftAssignment(employee==$employee, shiftType ==$shiftTypeNight, shiftDate==$shiftDateN)
+ 
+ then
+ scoreHolder.addSoftConstraintMatch(kcontext, - $weight);
+
+end
+
+   
 rule "insertEmployeeFreeSequence"
         salience 1 // Do these rules first (optional, for performance)
     when
