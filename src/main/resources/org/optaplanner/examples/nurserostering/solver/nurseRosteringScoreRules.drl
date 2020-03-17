@@ -303,7 +303,7 @@ rule "minimumConsecutiveWorkingDays"
         scoreHolder.addSoftConstraintMatch(kcontext, ($dayLength - $minimumValue) * $contractLine.getMinimumWeight());
 end
 
-rule "No night shift before free weekend"
+rule "Nonightshiftbeforefreeweekend"
 
     when $contractLine : BooleanContractLine(contractLineType == ContractLineType.NO_NIGHT_SHIFT_BEFORE_FREE_WEEKEND, enabled == true, $contract : contract) 
      $employee : Employee(contract == $contract, $weekendLength : weekendLength)
