@@ -16,7 +16,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="sources/fontawesomefx-commons-9.1.2-jdk8-1-javadoc.jar"/>
 	<classpathentry exported="true" kind="lib" path="sources/fontawesomefx-commons-9.1.2-jdk8-1.jar"/>
 	<classpathentry exported="true" kind="lib" path="sources/fontawesomefx-controls-9.1.2-jdk8-1.jar"/>
@@ -28,9 +27,11 @@
 	<classpathentry exported="true" kind="lib" path="sources/fontawesomefx-materialstackicons-2.1-5-9.1.2-jdk8-1.jar"/>
 	<classpathentry exported="true" kind="lib" path="sources/fontawesomefx-octicons-4.3.0-9.1.2-jdk8-1.jar"/>
 	<classpathentry exported="true" kind="lib" path="sources/fontawesomefx-weathericons-2.0.10-9.1.2-jdk8-1.jar"/>
-	<classpathentry exported="true" kind="lib" path="sources/controlsfx-8.40.13.jar"/>
-	<classpathentry exported="true" kind="lib" path="sources/recurrence-8.6.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="sources/view-8.6.1.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_211"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/JAVAFX14"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
