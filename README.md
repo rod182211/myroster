@@ -3,3 +3,13 @@ Roster application based on Optaplanner JavaFx and Hibernate Currently configure
 Currently the print function from Calendar view is not completed. There is also some tidy up work required although all it functioning. A MySqlFile is provide for ease of loading the database before opening the application.
 
 Disclaimer being you use this application at your own risk.
+For non java pers your can run the application by following the below steps.
+
+Install mysql (you can use something like Wampserver for windows)
+Create a database call newroster
+username - myrosterapp
+password - myroster
+Import the provided newroster.sql to get you started
+Once this is done you can run the RosterUpdate.jar file
+
+Note this has been developed using Java 11 so you will need to ensure you have Java 11 or higher SDK installed
