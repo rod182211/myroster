@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import org.controlsfx.control.CheckComboBox;
-import org.controlsfx.control.IndexedCheckModel;
 import org.hibernate.Session;
 import org.optaplanner.database.HibernateUtil;
 import org.optaplanner.database.RosterService;
@@ -49,17 +48,12 @@ public class EmployeeEditDialogController implements Initializable {
 	private TextField employeeIdField;
 	@FXML
 	private TextField employeename;
-	
-
 	@FXML
 	private ComboBox<Contract> contract;
 	@FXML
 	private CheckComboBox<Skill> skill;
 	@FXML
 	private ComboBox<Department> department;
-	/*
-	 * @FXML private ComboBox<Skill> skill;
-	 */
 	@FXML
 	private TextField streetnum;
 	@FXML
